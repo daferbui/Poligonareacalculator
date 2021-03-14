@@ -34,6 +34,7 @@ class Rectangle :
     return f"Rectangle(widht={self.widht}, height={self.height})"
   
   #hasta aquí todo solucionado
+  #pasamos a la segunda parte del programa
   
 
 
