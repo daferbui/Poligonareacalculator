@@ -30,11 +30,27 @@ class Rectangle :
         star = star + '*' * self.widht + '\n'
     return star
   
+  def get_among_inside (self,shape) :
+    if self.shape == 'sq' :
+      return #diremos las veces que cabe un cuadrado
+    else :
+      return #diremos las veces que cabe un rectangulo
+
+  
   def __str__(self) :
     return f"Rectangle(widht={self.widht}, height={self.height})"
   
   #pasamos a la segunda parte del programa
+
+class Square (Rectangle): #comprovar si la herencia funcionaba así
+  def __init__(self,lenght) : 
+    self.lenght = lenght
+
+  def set_side (self,new_lenght) :
+    self.lenght = new_lenght
   
+  def __str__ (self) :
+    return f"Square(side={self.lenght})"
 
 
 rectangle1 = Rectangle (10,5)
