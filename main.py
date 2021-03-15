@@ -3,7 +3,7 @@ class Rectangle :
     self.widht = widht
     self.height = height
     
-  def set_width (self,new_widht) :
+  def set_width (self, new_widht) :
     self.widht = new_widht
     
   def set_height (self, new_height) :
@@ -30,11 +30,33 @@ class Rectangle :
         star = star + '*' * self.widht + '\n'
     return star
   
+  def get_among_inside (self,shape) :
+    #si la clase es Cuadrado
+    if type(shape) == 'Square' :
+      big = max(self.widht,self.height)
+      lado = Square.side(shape)
+      #seguimos aquí comprovando los cuadrados que caben
+    else :
+      #seguimos aquí comprovando los rectangulos que caben
+      return 'HEI'
+
   def __str__(self) :
     return f"Rectangle(widht={self.widht}, height={self.height})"
   
   #pasamos a la segunda parte del programa
+
+class Square (Rectangle) : #comprovar si la herencia funcionaba así
+  def __init__(self,lenght) : 
+    self.lenght = lenght
+
+  def set_side (self,new_lenght) :
+    self.lenght = new_lenght
   
+  def __str__ (self) :
+    return f"Square(side={self.lenght})"
+  
+  def side (self) :
+    return self.lenght
 
 
 rectangle1 = Rectangle (10,5)
@@ -42,5 +64,8 @@ print (rectangle1.get_area())
 rectangle1.set_height(3)
 print (rectangle1)
 print (rectangle1.get_perimeter())
-print (rectangle1.get_picture()) 
+print (rectangle1.get_picture())
+cuadrado = Square (4)
+print (cuadrado)
+print (rectangle1.get_among_inside('sq'))
 
