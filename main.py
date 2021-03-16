@@ -29,9 +29,12 @@ class Rectangle :
     return star
   
   def get_among_inside (self,shape) :
-    #si la clase es Cuadrado
-    big = max(self.widht,self.height) #esto nos da el max del rect
-    square_side = Square.self.lenght(shape)
+    square_side = Square.side(shape)
+    print (square_side)
+    if self.widht > square_side and self.height > square_side :
+      return int ((self.widht * self.height) / square_side **2 )
+    else :
+      return int ((square_side ** 2) / (self.widht * self.height))
 
 
   def __str__(self) :
