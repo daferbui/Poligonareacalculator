@@ -30,13 +30,9 @@ class Rectangle :
   
   def get_among_inside (self,shape) :
     #si la clase es Cuadrado
-    if type(shape) == '__main__.Square' :
-      big = max(self.widht,self.height)
-      lado = Square.side(shape)
-      print (lado)
-    else :
-      #seguimos aquí comprovando los rectangulos que caben
-      return 'HEI'
+    big = max(self.widht,self.height) #esto nos da el max del rect
+    square_side = Square.self.lenght(shape)
+
 
   def __str__(self) :
     return f"Rectangle(widht={self.widht}, height={self.height})"
