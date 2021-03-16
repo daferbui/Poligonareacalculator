@@ -29,13 +29,14 @@ class Rectangle :
     return star
   
   def get_among_inside (self,shape) :
+    #si la clase es Cuadrado
     square_side = Square.side(shape)
     print (square_side)
     if self.widht > square_side and self.height > square_side :
       return int ((self.widht * self.height) / square_side **2 )
     else :
       return int ((square_side ** 2) / (self.widht * self.height))
-
+ 
 
   def __str__(self) :
     return f"Rectangle(widht={self.widht}, height={self.height})"
@@ -76,5 +77,5 @@ print (cuadrado.get_picture())
 
 rectangle1.set_height(8)
 rectangle1.set_width(16)
-print (rectangle1.get_among_inside('cuadrado'))
+print (rectangle1.get_among_inside(cuadrado))
 
